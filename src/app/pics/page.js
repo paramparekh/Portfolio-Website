@@ -16,15 +16,16 @@ export default function Pics() {
             }}>
                 {[1, 2, 3, 4, 5, 6].map((item) => (
                     <div key={item} style={{
-                        overflow: 'hidden', borderRadius: '8px', background: 'white',
+                        overflow: 'hidden', borderRadius: '8px',
+                        background: 'var(--card-bg)',
                         border: '1px solid var(--card-border)',
-                        boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+                        boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
                         transition: 'transform 0.2s',
                     }}>
                         <div style={{
                             width: '100%',
                             aspectRatio: '16/9',
-                            background: '#f1f5f9',
+                            background: 'rgba(148, 163, 184, 0.1)', /* Subtle dark placeholder */
                             position: 'relative',
                         }}>
                             <div style={{

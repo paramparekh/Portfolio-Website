@@ -1,23 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  --background: #fdfdfd;
-  /* Warmer off-white */
-  --foreground: #1e293b;
+  /* Clean Engineering / Academic Theme */
+  --background: #f8fafc;
+  /* Slate 50 - Crisp, technical white */
+  --foreground: #0f172a;
+  /* Slate 900 - High contrast text */
 
-  --primary: #0f172a;
+  --primary: #0e7490;
+  /* Cyan 700 - Engineering Teal */
   --secondary: #475569;
-  /* More vibrant academic blue */
-  --accent: #0284c7;
-  /* Sky 600 - brighter */
-  --accent-glow: rgba(2, 132, 199, 0.15);
+  /* Slate 600 - Precision Gray */
+
+  --accent: #2563eb;
+  /* Blue 600 - Active State */
+  --accent-glow: rgba(37, 99, 235, 0.1);
   --highlight: #f59e0b;
-  /* Amber - for subtle pops */
+  /* Amber 500 - Attention */
 
   --card-bg: #ffffff;
   --card-border: #e2e8f0;
+  /* Slate 200 */
 
-  --nav-bg: rgba(255, 255, 255, 0.95);
+  --nav-bg: rgba(255, 255, 255, 0.9);
+  /* Frosted White */
 
   --font-sans: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
@@ -64,6 +70,7 @@ a {
 
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
+  /* Slate 300 */
   border-radius: 4px;
 }
 

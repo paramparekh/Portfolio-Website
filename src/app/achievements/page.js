@@ -7,11 +7,20 @@ export default function Achievements() {
                 <h1 style={{ fontSize: '3rem', fontWeight: 'bold' }}>Achievements</h1>
             </header>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            <div style={{
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: '1.5rem',
+                maxWidth: '800px',
+                margin: '0 auto'
+            }}>
                 {[1, 2, 3].map((item) => (
                     <div key={item} className="glass-panel" style={{ padding: '2rem', display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
                         <div style={{
-                            width: '50px', height: '50px', borderRadius: '50%', background: '#fffff0', border: '1px solid #fef3c7', color: '#d97706',
+                            width: '50px', height: '50px', borderRadius: '50%',
+                            background: 'var(--accent-glow)',
+                            border: '1px solid var(--accent)',
+                            color: 'var(--accent)',
                             display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
                         }}>
                             <Trophy size={24} />
