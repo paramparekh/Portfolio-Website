@@ -8,27 +8,33 @@ export default function Pics() {
             </header>
 
             <div style={{
-                columns: '3 220px', columnGap: '1.5rem'
+                display: 'grid',
+                gridTemplateColumns: '1fr',
+                gap: '2rem',
+                maxWidth: '800px',
+                margin: '0 auto'
             }}>
                 {[1, 2, 3, 4, 5, 6].map((item) => (
                     <div key={item} style={{
-                        breakInside: 'avoid', marginBottom: '1.5rem', padding: '0.5rem',
-                        overflow: 'hidden', borderRadius: '4px', background: 'white',
-                        border: '1px solid var(--card-border)', boxShadow: '0 2px 4px rgba(0,0,0,0.02)'
+                        overflow: 'hidden', borderRadius: '8px', background: 'white',
+                        border: '1px solid var(--card-border)',
+                        boxShadow: '0 2px 8px rgba(0,0,0,0.04)',
+                        transition: 'transform 0.2s',
                     }}>
                         <div style={{
-                            width: '100%', height: `${200 + (item % 3) * 50}px`,
+                            width: '100%',
+                            aspectRatio: '16/9',
                             background: '#f1f5f9',
-                            position: 'relative', borderRadius: '2px'
+                            position: 'relative',
                         }}>
                             <div style={{
                                 position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center',
                                 opacity: 0.2, color: 'var(--secondary)'
                             }}>
-                                <ImageIcon size={32} />
+                                <ImageIcon size={48} />
                             </div>
                         </div>
-                        <div style={{ padding: '0.8rem 0.5rem 0.5rem', fontSize: '0.85rem', color: 'var(--secondary)', fontWeight: 500, textAlign: 'center' }}>
+                        <div style={{ padding: '1rem', fontSize: '0.9rem', color: 'var(--secondary)', fontWeight: 500, textAlign: 'center' }}>
                             Caption for image {item}
                         </div>
                     </div>
