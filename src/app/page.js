@@ -1,4 +1,5 @@
 import { ArrowRight, Mail, FileText, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,11 +13,9 @@ export default function Home() {
           <h1 style={{ fontSize: '3.5rem', fontWeight: '700', marginBottom: '1rem', lineHeight: 1.1 }}>
             Param Parekh
           </h1>
-          <h2 style={{ fontSize: '1.5rem', fontFamily: 'var(--font-sans)', fontWeight: '400', color: 'var(--secondary)', marginBottom: '1.5rem' }}>
-            Researcher & Developer
-          </h2>
+
           <p style={{ color: 'var(--foreground)', lineHeight: '1.8', marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px' }}>
-            I specialize in advanced computing systems and web technologies. My work bridges the gap between theoretical research and practical application, with a focus on scalable architecture and human-computer interaction.
+            I am a Graduate Student in Computer Science Department at Stony Brook University, New York, USA. My research interests include Quantum Computing and Cryptography. I am currently exploring quantum optimization and quantum cryptography.
           </p>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
@@ -38,15 +37,21 @@ export default function Home() {
         </div>
 
         {/* Profile Image Area */}
+        {/* Profile Image Area */}
         <div style={{
-          width: '250px', height: '250px', borderRadius: '50%',
-          background: 'linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%)',
+          width: '280px', height: '280px', borderRadius: '50%',
           border: '4px solid white',
-          boxShadow: '0 10px 25px rgba(2, 132, 199, 0.1)',
+          boxShadow: '0 10px 25px rgba(14, 116, 144, 0.15)', /* Teal shadow match */
           display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto',
           position: 'relative', overflow: 'hidden'
         }}>
-          <span style={{ fontSize: '6rem', color: 'var(--accent)', fontFamily: 'var(--font-serif)' }}>P</span>
+          <Image
+            src="/profile.jpg"
+            alt="Param Parekh"
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
         </div>
       </section>
 

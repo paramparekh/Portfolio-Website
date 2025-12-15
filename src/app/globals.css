@@ -29,6 +29,22 @@
   --font-serif: 'Playfair Display', serif;
 }
 
+[data-theme='dark'] {
+  --background: #0f172a; /* Slate 900 */
+  --foreground: #f1f5f9; /* Slate 100 */
+  
+  --primary: #22d3ee; /* Cyan 400 - Brighter for dark mode */
+  --secondary: #94a3b8; /* Slate 400 */
+  
+  --accent: #60a5fa; /* Blue 400 */
+  --accent-glow: rgba(96, 165, 250, 0.2);
+  
+  --card-bg: #1e293b; /* Slate 800 */
+  --card-border: #334155; /* Slate 700 */
+  
+  --nav-bg: rgba(15, 23, 42, 0.9); /* Dark frosted */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -42,6 +58,7 @@ body {
   overflow-x: hidden;
   line-height: 1.6;
   min-height: 100vh;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 h1,

@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { User, GraduationCap, Briefcase, Code, Microscope, Award, BookOpen, Image as ImageIcon } from "lucide-react";
 import styles from "./Navbar.module.css";
 
+import ThemeToggle from "./ThemeToggle";
+
 const navItems = [
   { name: "About Me", path: "/", icon: User },
   { name: "Education", path: "/education", icon: GraduationCap },
@@ -26,10 +28,10 @@ export default function Navbar() {
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = pathname === item.path;
-            
+
             return (
-              <Link 
-                key={item.path} 
+              <Link
+                key={item.path}
                 href={item.path}
                 className={`${styles.navItem} ${isActive ? styles.active : ""}`}
               >
@@ -40,6 +42,8 @@ export default function Navbar() {
             );
           })}
         </div>
+        <div style={{ marginLeft: '0.5rem', borderLeft: '1px solid var(--secondary)', opacity: 0.3, height: '24px' }} />
+        <ThemeToggle />
       </div>
     </nav>
   );
