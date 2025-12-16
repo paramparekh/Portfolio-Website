@@ -19,20 +19,24 @@ export default function Home() {
           </p>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <button style={{
-              background: 'var(--primary)', border: 'none', padding: '0.8rem 1.8rem',
-              borderRadius: '4px', color: 'white', fontWeight: '500', cursor: 'pointer',
-              display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '1rem'
-            }}>
-              Contact Me <Mail size={16} />
-            </button>
-            <button style={{
-              background: 'transparent', border: '1px solid var(--card-border)',
-              padding: '0.8rem 1.8rem', borderRadius: '4px', color: 'var(--foreground)',
-              fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem'
-            }}>
-              View CV <FileText size={16} />
-            </button>
+            <a href="mailto:param.parekh@stonybrook.edu" style={{ textDecoration: 'none' }}>
+              <button style={{
+                background: 'var(--primary)', border: 'none', padding: '0.8rem 1.8rem',
+                borderRadius: '4px', color: 'white', fontWeight: '500', cursor: 'pointer',
+                display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '1rem'
+              }}>
+                Contact Me <Mail size={16} />
+              </button>
+            </a>
+            <a href="#" style={{ textDecoration: 'none' }}>
+              <button style={{
+                background: 'transparent', border: '1px solid var(--card-border)',
+                padding: '0.8rem 1.8rem', borderRadius: '4px', color: 'var(--foreground)',
+                fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem'
+              }}>
+                View CV <FileText size={16} />
+              </button>
+            </a>
           </div>
         </div>
 
@@ -57,9 +61,14 @@ export default function Home() {
 
       {/* Social Links - Clean List */}
       <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-        {['GitHub', 'LinkedIn', 'Google Scholar', 'Twitter'].map((social) => (
-          <a key={social} href="#" className="social-link">
-            {social} <ArrowRight size={14} />
+        {[
+          { name: 'GitHub', url: 'https://github.com/paramparekh' },
+          { name: 'LinkedIn', url: 'https://www.linkedin.com/in/param-parekh-2a990a1b7/' },
+          { name: 'Google Scholar', url: 'https://scholar.google.com/citations?hl=en&user=gFLDXv8AAAAJ' },
+          { name: 'Twitter', url: 'https://x.com/ParamParam98832' }
+        ].map((social) => (
+          <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="social-link">
+            {social.name} <ArrowRight size={14} />
           </a>
         ))}
       </div>

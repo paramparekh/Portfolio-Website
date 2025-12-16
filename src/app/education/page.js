@@ -1,4 +1,4 @@
-import { GraduationCap, Calendar } from "lucide-react";
+import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 export default function Education() {
     return (
@@ -9,9 +9,15 @@ export default function Education() {
 
             {/* Education Item 1 */}
             <div style={{ paddingLeft: '1.5rem', borderLeft: '2px solid var(--card-border)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.5rem' }}>
-                    <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>Stony Brook University</h2>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontSize: '0.95rem', fontFamily: 'var(--font-sans)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.5rem' }}>
+                    <div>
+                        <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>Stony Brook University</h2>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.2rem' }}>
+                            <MapPin size={14} />
+                            <span>Stony Brook, New York, USA</span>
+                        </div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontSize: '0.95rem', fontFamily: 'var(--font-sans)', marginTop: '0.3rem' }}>
                         <Calendar size={16} />
                         <span>2025 - 2027</span>
                     </div>
@@ -28,9 +34,15 @@ export default function Education() {
 
             {/* Education Item 2 */}
             <div style={{ paddingLeft: '1.5rem', borderLeft: '2px solid var(--card-border)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.5rem' }}>
-                    <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>University Name</h2>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontSize: '0.95rem', fontFamily: 'var(--font-sans)' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.5rem' }}>
+                    <div>
+                        <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>Dhirubhai Ambani university</h2>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--secondary)', fontSize: '0.9rem', marginTop: '0.2rem' }}>
+                            <MapPin size={14} />
+                            <span>Gandhinagar, Gujarat, India</span>
+                        </div>
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--secondary)', fontSize: '0.95rem', fontFamily: 'var(--font-sans)', marginTop: '0.3rem' }}>
                         <Calendar size={16} />
                         <span>2019 - 2023</span>
                     </div>
