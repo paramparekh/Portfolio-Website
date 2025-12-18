@@ -16,6 +16,7 @@ export default function Home() {
 
           <p style={{ color: 'var(--foreground)', lineHeight: '1.8', marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px' }}>
             I am a Graduate Student in Computer Science Department at Stony Brook University, New York, USA. My research interests include Quantum Computing and Cryptography. I am currently exploring quantum optimization and quantum cryptography.
+            I also enjoy building software products and actively looking for summer internships in Software Development, Quantum Computing, and Cryptography.
           </p>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
@@ -28,13 +29,13 @@ export default function Home() {
                 Contact Me <Mail size={16} />
               </button>
             </a>
-            <a href="#" style={{ textDecoration: 'none' }}>
+            <a href="https://drive.google.com/file/d/1-G8cx2lqUHYFwEar6Kvb4CFS9YGiMthb/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <button style={{
                 background: 'transparent', border: '1px solid var(--card-border)',
                 padding: '0.8rem 1.8rem', borderRadius: '4px', color: 'var(--foreground)',
                 fontWeight: '500', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem'
               }}>
-                View CV <FileText size={16} />
+                View Resume <FileText size={16} />
               </button>
             </a>
           </div>
@@ -49,12 +50,10 @@ export default function Home() {
           display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto',
           position: 'relative', overflow: 'hidden'
         }}>
-          <Image
-            src="/profile.jpg"
+          <img
+            src={`/profile.jpg?v=${new Date().getTime()}`}
             alt="Param Parekh"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
+            style={{ objectFit: 'cover', width: '100%', height: '100%' }}
           />
         </div>
       </section>
