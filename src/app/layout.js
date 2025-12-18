@@ -3,8 +3,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata = {
-  title: "Param Parekh | Researcher",
-  description: "Academic Portfolio of Param Parekh",
+  title: "Param Parekh",
+  description: "Researcher in Quantum Computing and Cryptography",
 };
 
 export default function RootLayout({ children }) {
