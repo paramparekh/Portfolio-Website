@@ -9,26 +9,7 @@ export default function Achievements() {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
 
-                {/* 1. MIT Quantum Hackathon - Jan 2026 */}
-                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
-                    <div style={{
-                        width: '50px', height: '50px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '50%',
-                        border: '1px solid #f59e0b', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
-                    }}>
-                        <Trophy size={24} color="#f59e0b" />
-                    </div>
-                    <div>
-                        <h3 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem', color: 'var(--primary)' }}>
-                            MIT Quantum Hackathon
-                        </h3>
-                        <p style={{ color: 'var(--foreground)', marginBottom: '0.2rem', fontSize: '1rem' }}>
-                            Confirmed Participant (iQuHack 2026)
-                        </p>
-                        <p style={{ color: 'var(--secondary)', fontSize: '0.9rem' }}>
-                            Jan 2026
-                        </p>
-                    </div>
-                </div>
+
 
                 {/* 2. Appreciation Awards - Jul 2024 */}
                 <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>

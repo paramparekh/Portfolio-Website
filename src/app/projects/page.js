@@ -7,14 +7,16 @@ export default function Projects() {
             description: "Conducted a literature review on the security of classical cryptographic primitives (GGM PRF, Naor-Reingold PRF, LWE-based PRFs) under quantum queries. Studied the collapse-binding property to restore security for commitment schemes against quantum attackers.",
             tags: ["Quantum Cryptography", "Security Reductions", "PRF", "LWE"],
             icon: Lock,
-            date: "Sep 2025"
+            date: "Sep 2025",
+            link: "https://drive.google.com/file/d/1cBlfvWmeRy80NDj3aPdNodwX2itNVjhS/view?usp=sharing"
         },
         {
             title: "Implementation of Quantum Algorithms on IBM Qiskit",
-            description: "Implemented standard quantum algorithms including Quantum Teleportation, Deutsch-Jozsa Algorithm, Grover’s Search, Quantum Random Number Generation, and QKD protocols using IBM Qiskit framework.",
+            description: "Implemented standard quantum algorithms including Deutsch-Jozsa Algorithm, Grover’s Search, Quantum Random Number Generation, and QKD protocols using IBM Qiskit framework.",
             tags: ["IBM Qiskit", "Quantum Algorithms", "Python", "QKD"],
             icon: Code,
-            date: "Nov 2025"
+            date: "Nov 2025",
+            link: "https://github.com/paramparekh/Foundational-QuantumAlgorithms-Qiskit.git"
         },
         {
             title: "Detection and Tracking of Accidents using Sequential Estimation Techniques",

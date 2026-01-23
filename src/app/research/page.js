@@ -57,6 +57,33 @@ export default function Research() {
                     </div>
                 </div>
 
+                {/* OEIS Publications */}
+                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
+                    <div style={{
+                        minWidth: '50px', height: '60px', background: 'var(--background)', borderRadius: '4px', border: '1px solid var(--card-border)',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                    }}>
+                        <FileText size={24} style={{ color: 'var(--secondary)' }} />
+                    </div>
+                    <div>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.4rem', color: 'var(--primary)' }}>
+                            OEIS Series: A360323 & A358714
+                        </h3>
+                        <p style={{ color: 'var(--secondary)', marginBottom: '0.6rem', fontSize: '0.95rem' }}>
+                            Param Parekh, Paavan Parekh
+                        </p>
+
+                        <div style={{ display: 'flex', gap: '1.2rem', flexWrap: 'wrap', alignItems: 'center', marginTop: '0.8rem' }}>
+                            <a href="https://oeis.org/A360323" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', fontWeight: '600', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem' }}>
+                                <Globe size={16} /> A360323
+                            </a>
+                            <a href="https://oeis.org/A358714" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)', fontWeight: '600', display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.9rem' }}>
+                                <Globe size={16} /> A358714
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </section>
         </div>
     );

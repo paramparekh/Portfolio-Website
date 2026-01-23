@@ -29,7 +29,7 @@ export default function Home() {
                 Contact Me <Mail size={16} />
               </button>
             </a>
-            <a href="https://drive.google.com/file/d/1-G8cx2lqUHYFwEar6Kvb4CFS9YGiMthb/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <a href="https://drive.google.com/file/d/1NqZfdvBSnAUk5ZUPBd2iwJvwwWOIYLqN/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <button style={{
                 background: 'transparent', border: '1px solid var(--card-border)',
                 padding: '0.8rem 1.8rem', borderRadius: '4px', color: 'var(--foreground)',

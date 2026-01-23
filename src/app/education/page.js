@@ -28,7 +28,7 @@ export default function Education() {
                 </h3>
 
                 <p style={{ color: 'var(--foreground)', lineHeight: '1.6', fontSize: '1rem' }}>
-                    <strong>GPA:</strong> 4/4 <br />
+                    <strong>GPA:</strong> 3.89/4 <br />
                     Relevant Coursework: Quantum Computing, Systems Security, Data Science Fundamentals
                 </p>
             </div>
