@@ -84,7 +84,7 @@ export default function Experience() {
                         <h4 style={{ fontSize: '1.1rem', fontWeight: '600' }}>Programming Languages</h4>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
-                        {['C', 'C++', 'Python', 'SQL', 'Matlab', 'HTML', 'CSS', 'Javascript', 'GO'].map(skill => (
+                        {['C', 'C++', 'Python', 'Qiskit', 'SQL', 'Matlab', 'HTML', 'CSS', 'Javascript', 'GO'].map(skill => (
                             <span key={skill} style={{
                                 background: 'rgba(14, 116, 144, 0.1)', color: 'var(--primary)',
                                 padding: '0.3rem 0.6rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: '500'
