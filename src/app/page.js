@@ -15,7 +15,7 @@ export default function Home() {
           </h1>
 
           <p style={{ color: 'var(--foreground)', lineHeight: '1.8', marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px' }}>
-            I am a Graduate Student in Computer Science Department at Stony Brook University, New York, USA. My research interests include Quantum Computing and Cryptography. I am currently exploring quantum optimization and quantum cryptography.
+            I am a Graduate Student in Computer Science Department at Stony Brook University, New York, USA. My research interests include Quantum Computing and Cryptography. I am currently exploring quantum algorithms and quantum cryptography.
             I also enjoy building software products and actively looking for summer internships in Software Development, Quantum Computing, and Cryptography.
           </p>
 
@@ -29,7 +29,7 @@ export default function Home() {
                 Contact Me <Mail size={16} />
               </button>
             </a>
-            <a href="https://drive.google.com/file/d/1NqZfdvBSnAUk5ZUPBd2iwJvwwWOIYLqN/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+            <a href="https://drive.google.com/file/d/1XGhfmuMEEHAALLd7mpbXsT5u3EwabiCp/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
               <button style={{
                 background: 'transparent', border: '1px solid var(--card-border)',
                 padding: '0.8rem 1.8rem', borderRadius: '4px', color: 'var(--foreground)',
