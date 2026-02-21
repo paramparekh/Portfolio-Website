@@ -3,6 +3,14 @@ import { Github, ExternalLink, Code, Layers, Database, Lock, Radio, Globe } from
 export default function Projects() {
     const projects = [
         {
+            title: "Circuit Fingerprint Challenge: MIT iQuHACK’26",
+            description: "Worked on a predictive modeling challenge to estimate cost–accuracy tradeoffs for quantum circuit simulation. Extracted structural and performance features from OpenQASM circuits and built models to predict the minimum approximation threshold needed to achieve target fidelity and the expected runtime, enabling smarter configuration choices before simulation.",
+            tags: ["Quantum Simulation", "Predictive Modeling", "OpenQASM", "MIT iQuHACK"],
+            icon: Layers,
+            date: "Jan 2026",
+            link: "https://github.com/paramparekh/iQuHack26-QuantumRings"
+        },
+        {
             title: "Quantum Cryptography: Security Reductions in Quantum World",
             description: "Conducted a literature review on the security of classical cryptographic primitives (GGM PRF, Naor-Reingold PRF, LWE-based PRFs) under quantum queries. Studied the collapse-binding property to restore security for commitment schemes against quantum attackers.",
             tags: ["Quantum Cryptography", "Security Reductions", "PRF", "LWE"],
