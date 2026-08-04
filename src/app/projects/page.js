@@ -3,6 +3,19 @@ import { Github, ExternalLink, Code, Layers, Database, Lock, Radio, Globe } from
 export default function Projects() {
     const projects = [
         {
+            title: "LLM Text Watermarking",
+            description: [
+                "Implemented two cryptographic indistinguishability-based LLM text watermarking schemes, Undetectable Watermarking and Pseudorandom Codes (PRC), on Mistral-7B using multinomial sampling.",
+                "Conducted empirical evaluation of watermark detection, analyzing detection accuracy, text quality preservation, and robustness; evaluated impact across downstream tasks including machine translation, code generation, and summarization.",
+                "Provided one of the first empirical evaluations of PRC-based watermarking for LLM-generated text and performed rigorous cryptographic comparison analysis of multiple PRC constructions, assessing indistinguishability and adversarial resistance."
+            ],
+            tags: ["AI Safety", "NLP", "Cryptography"],
+            icon: Lock,
+            date: "Jan 2026 – Present",
+            teamSize: 2,
+            link: "https://github.com/paavanmparekh/LLM-Text-Watermarking"
+        },
+        {
             title: "Circuit Fingerprint Challenge: MIT iQuHACK’26",
             description: "Worked on a predictive modeling challenge to estimate cost–accuracy tradeoffs for quantum circuit simulation. Extracted structural and performance features from OpenQASM circuits and built models to predict the minimum approximation threshold needed to achieve target fidelity and the expected runtime, enabling smarter configuration choices before simulation.",
             tags: ["Quantum Simulation", "Predictive Modeling", "OpenQASM", "MIT iQuHACK"],
@@ -99,12 +112,20 @@ export default function Projects() {
                                     </h2>
                                 </div>
                                 <div style={{ fontSize: '0.85rem', color: 'var(--secondary)', marginBottom: '0.8rem', fontWeight: '500' }}>
-                                    {project.date}
+                                    {project.teamSize ? `Team size: ${project.teamSize} · ${project.date}` : project.date}
                                 </div>
 
-                                <p style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1, marginBottom: '1.2rem' }}>
-                                    {project.description}
-                                </p>
+                                {Array.isArray(project.description) ? (
+                                    <ul style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1, margin: '0 0 1.2rem', paddingLeft: '1.2rem' }}>
+                                        {project.description.map((item) => (
+                                            <li key={item} style={{ marginBottom: '0.6rem' }}>{item}</li>
+                                        ))}
+                                    </ul>
+                                ) : (
+                                    <p style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1, marginBottom: '1.2rem' }}>
+                                        {project.description}
+                                    </p>
+                                )}
 
                                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: 'auto' }}>
                                     {project.tags.map(tag => (
