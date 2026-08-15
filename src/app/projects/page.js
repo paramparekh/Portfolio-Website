@@ -3,6 +3,20 @@ import { Github, ExternalLink, Code, Layers, Database, Lock, Radio, Globe } from
 export default function Projects() {
     const projects = [
         {
+            title: "Pseudorandom Unitaries",
+            description: [
+                "Conducted a literature review on Pseudorandom Unitaries (PRUs) as part of a cryptography course, studying efficient quantum circuits that are computationally indistinguishable from Haar-random unitaries.",
+                "Learned the PFC construction of PRU and how to prove its existence based on standard cryptographic assumptions via the path-recording oracle technique."
+            ],
+            tags: ["Quantum Cryptography", "PRU", "Quantum Computing", "Cryptography"],
+            icon: Lock,
+            date: "March 2026",
+            links: [
+                { label: "Report", url: "https://drive.google.com/file/d/1Yh8kDL3mxNtUWQXDJnLmhS9AOsZtSu4u/view?usp=sharing" },
+                { label: "Slides", url: "https://pseudo-random-unitaries.vercel.app/" }
+            ]
+        },
+        {
             title: "LLM Text Watermarking",
             description: [
                 "Implemented two cryptographic indistinguishability-based LLM text watermarking schemes, Undetectable Watermarking and Pseudorandom Codes (PRC), on Mistral-7B using multinomial sampling.",
@@ -16,7 +30,7 @@ export default function Projects() {
             link: "https://github.com/paavanmparekh/LLM-Text-Watermarking"
         },
         {
-            title: "Circuit Fingerprint Challenge: MIT iQuHACK’26",
+            title: "Circuit Fingerprint Challenge: MIT iQuHACK'26",
             description: "Worked on a predictive modeling challenge to estimate cost–accuracy tradeoffs for quantum circuit simulation. Extracted structural and performance features from OpenQASM circuits and built models to predict the minimum approximation threshold needed to achieve target fidelity and the expected runtime, enabling smarter configuration choices before simulation.",
             tags: ["Quantum Simulation", "Predictive Modeling", "OpenQASM", "MIT iQuHACK"],
             icon: Layers,
@@ -33,7 +47,7 @@ export default function Projects() {
         },
         {
             title: "Implementation of Quantum Algorithms on IBM Qiskit",
-            description: "Implemented standard quantum algorithms including Deutsch-Jozsa Algorithm, Grover’s Search, Quantum Random Number Generation, and QKD protocols using IBM Qiskit framework.",
+            description: "Implemented standard quantum algorithms including Deutsch-Jozsa Algorithm, Grover's Search, Quantum Random Number Generation, and QKD protocols using IBM Qiskit framework.",
             tags: ["IBM Qiskit", "Quantum Algorithms", "Python", "QKD"],
             icon: Code,
             date: "Nov 2025",
@@ -102,6 +116,20 @@ export default function Projects() {
                                     }} title="View Project">
                                         <Globe size={18} color="var(--accent)" />
                                     </a>
+                                )}
+                                {project.links && (
+                                    <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', gap: '6px' }}>
+                                        {project.links.map((l) => (
+                                            <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer" style={{
+                                                background: 'rgba(255,255,255,0.2)', padding: '4px 10px', borderRadius: '12px',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                backdropFilter: 'blur(4px)', fontSize: '0.78rem', fontWeight: '600',
+                                                color: 'var(--accent)', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.3)'
+                                            }} title={l.label}>
+                                                {l.label}
+                                            </a>
+                                        ))}
+                                    </div>
                                 )}
                             </div>
 

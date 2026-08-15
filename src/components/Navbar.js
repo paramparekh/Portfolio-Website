@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { User, GraduationCap, Briefcase, Code, Microscope, Award, BookOpen, Image as ImageIcon } from "lucide-react";
+import { User, GraduationCap, Briefcase, Code, Microscope, BookOpen, Image as ImageIcon } from "lucide-react";
 import styles from "./Navbar.module.css";
 
 import ThemeToggle from "./ThemeToggle";
@@ -13,7 +13,6 @@ const navItems = [
   { name: "Experience", path: "/experience", icon: Briefcase },
   { name: "Projects", path: "/projects", icon: Code },
   { name: "Research", path: "/research", icon: Microscope },
-  { name: "Achievements", path: "/achievements", icon: Award },
   { name: "Blogs", path: "/blogs", icon: BookOpen },
   { name: "Pics", path: "/pics", icon: ImageIcon },
 ];

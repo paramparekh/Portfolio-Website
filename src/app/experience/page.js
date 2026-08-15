@@ -1,4 +1,4 @@
-import { Trophy, Users, BookOpen, Code, Terminal, Layers } from "lucide-react";
+import { Trophy, Users, BookOpen, Code, Terminal, Layers, Microscope, Award, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Experience() {
@@ -7,6 +7,34 @@ export default function Experience() {
             <header style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '1rem' }}>
                 <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Experience</h1>
             </header>
+
+            {/* 0. Graduate Research Assistant - May 2026 to present */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+                {/* Left Col: Icon & Date */}
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                    <div style={{ width: '70px', height: '70px', position: 'relative', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <div style={{ width: '70px', height: '70px', background: 'rgba(14, 116, 144, 0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--card-border)' }}>
+                            <Microscope size={32} color="var(--primary)" />
+                        </div>
+                    </div>
+                    <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: '500', textAlign: 'center' }}>
+                        May 2026 <br /> -- <br /> Present
+                    </div>
+                </div>
+
+                {/* Right Col: Content */}
+                <div>
+                    <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>Graduate Research Assistant</h2>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>Stony Brook University &nbsp;&mdash;&nbsp; New York, USA</h3>
+
+                    <ul style={{
+                        display: 'flex', flexDirection: 'column', gap: '0.6rem',
+                        color: 'var(--foreground)', lineHeight: '1.6', paddingLeft: '1rem', fontSize: '1rem'
+                    }}>
+                        <li>Conducting graduate thesis research in quantum cryptography under the supervision of Prof. Supartha Podder, investigating applications of quantum computing theory to emerging cryptographic primitives.</li>
+                    </ul>
+                </div>
+            </div>
 
             {/* 1. Job 1 - Aug 2023 to July 2025 (GE Vernova SW I) */}
             <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
@@ -151,8 +179,10 @@ export default function Experience() {
 
                 {/* Right Col: Content */}
                 <div>
-                    <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>MIT Quantum Hackathon</h2>
-                    <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Confirmed Participant • iQuHack 2026</h3>
+                    <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>
+                        <a href="https://drive.google.com/file/d/1OkawFIcH_82slAnBwuUNCGROPOpVF0y1/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>MIT Quantum Hackathon</a>
+                    </h2>
+                    <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Confirmed Participant &bull; iQuHack 2026</h3>
                 </div>
             </div>
 
@@ -213,6 +243,77 @@ export default function Experience() {
                     </h2>
                     <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
                 </div>
+            </div>
+
+            <div style={{ height: '1px', background: 'var(--card-border)', margin: '1rem 0' }} />
+
+            <h3 style={{ fontSize: '1.8rem', fontWeight: '600', color: 'var(--secondary)', marginBottom: '1rem' }}>Achievements</h3>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
+
+                {/* GE Vernova Awards - Jul 2024 */}
+                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
+                    <div style={{
+                        width: '50px', height: '50px', background: 'rgba(234, 179, 8, 0.1)', borderRadius: '50%',
+                        border: '1px solid #eab308', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                    }}>
+                        <Award size={24} color="#eab308" />
+                    </div>
+                    <div>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem', color: 'var(--primary)' }}>
+                            GE Vernova Awards
+                        </h3>
+                        <p style={{ color: 'var(--foreground)', marginBottom: '0.2rem', fontSize: '1rem' }}>
+                            &ldquo;Deliver with Focus&rdquo; and &ldquo;Act with Humility&rdquo;
+                        </p>
+                        <p style={{ color: 'var(--secondary)', fontSize: '0.9rem' }}>
+                            Jul 2024
+                        </p>
+                    </div>
+                </div>
+
+                {/* First Rank C++ - Jan 2023 */}
+                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
+                    <div style={{
+                        width: '50px', height: '50px', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '50%',
+                        border: '1px solid #10b981', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                    }}>
+                        <Trophy size={24} color="#10b981" />
+                    </div>
+                    <div>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem', color: 'var(--primary)' }}>
+                            First Rank
+                        </h3>
+                        <p style={{ color: 'var(--foreground)', marginBottom: '0.2rem', fontSize: '1rem' }}>
+                            1-month C++ Training Program, GE Vernova
+                        </p>
+                        <p style={{ color: 'var(--secondary)', fontSize: '0.9rem' }}>
+                            Jan 2023
+                        </p>
+                    </div>
+                </div>
+
+                {/* Second Rank State - Jun 2019 */}
+                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
+                    <div style={{
+                        width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%',
+                        border: '1px solid #3b82f6', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
+                    }}>
+                        <Star size={24} color="#3b82f6" />
+                    </div>
+                    <div>
+                        <h3 style={{ fontSize: '1.2rem', fontWeight: '700', marginBottom: '0.2rem', color: 'var(--primary)' }}>
+                            Second Rank in State
+                        </h3>
+                        <p style={{ color: 'var(--foreground)', marginBottom: '0.2rem', fontSize: '1rem' }}>
+                            GHSEB Class 12th Examinations
+                        </p>
+                        <p style={{ color: 'var(--secondary)', fontSize: '0.9rem' }}>
+                            Jun 2019
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     );
