@@ -15,8 +15,7 @@ export default function Home() {
           </h1>
 
           <p style={{ color: 'var(--foreground)', lineHeight: '1.8', marginBottom: '2.5rem', fontSize: '1.1rem', maxWidth: '600px' }}>
-            I am a Graduate Student in the Computer Science Department at Stony Brook University, New York, USA. My research interests include quantum cryptography and quantum error correction. I am currently pursuing my thesis under the supervision of Prof. Supartha Podder.
-            Actively looking for PhD opportunities.
+            I am pursuing a Master&apos;s in Computer Science at Stony Brook University, New York, USA. My research interests lie in quantum cryptography and quantum error correction. I am currently working on my thesis under the supervision of Prof. Supartha Podder, and actively looking for PhD opportunities.
           </p>
 
           <div style={{ display: 'flex', gap: '1rem' }}>
