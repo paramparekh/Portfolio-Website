@@ -1,4 +1,4 @@
-﻿.sidebar { position: fixed; inset: 0 auto 0 0; width: var(--sidebar-width); background: #101f38; color: #edf3ff; padding: 2.6rem 1.5rem 1.25rem; display: flex; flex-direction: column; z-index: 100; overflow-y: auto; }
+.sidebar { grid-column: 1; grid-row: 1; position: sticky; top: 0; width: 100%; min-width: 0; height: 100vh; height: 100dvh; background: #101f38; color: #edf3ff; padding: 2.6rem 1.5rem 1.25rem; display: flex; flex-direction: column; z-index: 100; overflow-y: auto; }
 .identity { display: flex; flex-direction: column; align-items: flex-start; }
 .monogram { display: grid; place-items: center; width: 52px; height: 52px; background: #2760d5; border: 1px solid #5d8ced; border-radius: 12px; font: 600 1.55rem/1 var(--font-serif); margin-bottom: 1.4rem; letter-spacing: -0.08em; }
 .monogram span { display: none; }
@@ -14,7 +14,7 @@
 .themeControl { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; }
 .menuToggle { display: none; }
 @media (max-width: 800px) {
-  .sidebar { position: relative; width: 100%; padding: 1rem 1.25rem; }
+  .sidebar { position: static; height: auto; padding: 1rem 1.25rem; }
   .sidebarHeader { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
   .monogram { display: none; }
   .name { font-size: 1.25rem; }

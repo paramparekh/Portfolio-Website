@@ -13,10 +13,12 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <a className="skip-link" href="#main-content">Skip to content</a>
-          <Navbar />
-          <main className="container" id="main-content">
-            {children}
-          </main>
+          <div className="site-layout">
+            <Navbar />
+            <main className="container" id="main-content">
+              {children}
+            </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
