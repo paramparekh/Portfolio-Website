@@ -31,13 +31,13 @@ export default function Home() {
       <section className="research-overview" aria-labelledby="research-heading">
         <div className="section-title-row"><h2 id="research-heading">Research interests</h2><a href="/research">Explore research <ArrowUpRight size={16} aria-hidden="true" /></a></div>
         <ul>
-          <li><span className="interest-number">01</span><span>Quantum cryptography</span></li>
-          <li><span className="interest-number">02</span><span>AI generated content detection</span></li>
-          <li><span className="interest-number">03</span><span>Quantum error correction</span></li>
-          <li><span className="interest-number">04</span><span>Artificial intelligence</span></li>
+          <li><span>Quantum cryptography</span></li>
+          <li><span>AI generated content detection</span></li>
+          <li><span>Quantum error correction</span></li>
+          <li><span>Artificial intelligence</span></li>
         </ul>
       </section>
-      <div className="social-links" aria-label="Academic and social profiles"><span className="social-label">Find me online</span>
+      <div className="social-links" aria-label="Academic and social profiles">
         {[
           { name: "LinkedIn", url: "https://www.linkedin.com/in/param-parekh-2a990a1b7/" },
           { name: "Google Scholar", url: "https://scholar.google.com/citations?hl=en&user=gFLDXv8AAAAJ" },

@@ -1,5 +1,6 @@
+import SkillBadge from "@/components/SkillBadge";
 import PageHeader from "@/components/PageHeader";
-import { Trophy, Users, BookOpen, Code, Terminal, Layers, Microscope, Award, Star } from "lucide-react";
+import { Trophy, Users, BookOpen, CodeXml, Wrench, Monitor, Award, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Experience() {
@@ -11,10 +12,8 @@ export default function Experience() {
             <article className="timeline-entry">
                 {/* Left Col: Icon & Date */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
-                    <div style={{ width: '70px', height: '70px', position: 'relative', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <div style={{ width: '70px', height: '70px', background: 'var(--accent-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--card-border)' }}>
-                            <Microscope size={32} color="var(--primary)" />
-                        </div>
+                    <div className="employer-logo">
+                        <Image src="/sbu-logo.jpg" alt="Stony Brook University" width={70} height={58} />
                     </div>
                     <div style={{ color: 'var(--secondary)', fontSize: '0.9rem', fontWeight: '500', textAlign: 'center' }}>
                         May 2026 <br /> -- <br /> Present
@@ -105,17 +104,12 @@ export default function Experience() {
                 {/* Languages */}
                 <div className="glass-panel" style={{ padding: '1.5rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
-                        <Code size={20} color="var(--primary)" />
+                        <CodeXml size={22} color="var(--primary)" aria-hidden="true" />
                         <h4 style={{ fontSize: '1.1rem', fontWeight: '600' }}>Programming Languages</h4>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                         {['C', 'C++', 'Python', 'Qiskit', 'ZX calculus', 'SQL', 'Matlab', 'HTML', 'CSS', 'Javascript', 'GO'].map(skill => (
-                            <span key={skill} style={{
-                                background: 'var(--accent-glow)', color: 'var(--primary)',
-                                padding: '0.3rem 0.6rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: '500'
-                            }}>
-                                {skill}
-                            </span>
+                            <SkillBadge key={skill} name={skill} />
                         ))}
                     </div>
                 </div>
@@ -123,17 +117,12 @@ export default function Experience() {
                 {/* Tools */}
                 <div className="glass-panel" style={{ padding: '1.5rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
-                        <Terminal size={20} color="var(--accent)" />
+                        <Wrench size={22} color="var(--accent)" aria-hidden="true" />
                         <h4 style={{ fontSize: '1.1rem', fontWeight: '600' }}>Tools & Frameworks</h4>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                         {['Visual Studio', 'VS Code', 'PostgreSQL', 'Matlab & Simulink', 'Arduino IDE', 'Install Shield', 'Angular'].map(skill => (
-                            <span key={skill} style={{
-                                background: 'var(--accent-glow)', color: 'var(--accent)',
-                                padding: '0.3rem 0.6rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: '500'
-                            }}>
-                                {skill}
-                            </span>
+                            <SkillBadge key={skill} name={skill} />
                         ))}
                     </div>
                 </div>
@@ -141,17 +130,12 @@ export default function Experience() {
                 {/* OS */}
                 <div className="glass-panel" style={{ padding: '1.5rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
-                        <Layers size={20} color="var(--highlight)" />
+                        <Monitor size={22} color="var(--primary)" aria-hidden="true" />
                         <h4 style={{ fontSize: '1.1rem', fontWeight: '600' }}>Operating Systems</h4>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                         {['Windows', 'Linux'].map(skill => (
-                            <span key={skill} style={{
-                                background: 'rgba(245, 158, 11, 0.1)', color: '#d97706',
-                                padding: '0.3rem 0.6rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: '500'
-                            }}>
-                                {skill}
-                            </span>
+                            <SkillBadge key={skill} name={skill} />
                         ))}
                     </div>
                 </div>

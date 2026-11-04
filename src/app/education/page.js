@@ -4,7 +4,7 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react";
 export default function Education() {
     return (
         <div className="page-stack">
-            <PageHeader title="Education" description="Academic background in computer science and information technology." />
+            <PageHeader title="Education" description="Academic background in Information and Communication Technology." />
 
             {/* Education Item 1 */}
             <div className="education-entry">
