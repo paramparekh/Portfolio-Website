@@ -12,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
+          <a className="skip-link" href="#main-content">Skip to content</a>
           <Navbar />
           <main className="container" id="main-content">
             {children}

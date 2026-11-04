@@ -1,20 +1,20 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, UserRound, GraduationCap, BriefcaseBusiness, FolderCode, Microscope, BookOpen, Camera } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import styles from "./Navbar.module.css";
 
 const navItems = [
-  { name: "About Me", path: "/" },
-  { name: "Education", path: "/education" },
-  { name: "Experience", path: "/experience" },
-  { name: "Projects", path: "/projects" },
-  { name: "Research", path: "/research" },
-  { name: "Blogs", path: "/blogs" },
-  { name: "Pics", path: "/pics" },
+  { name: "About Me", icon: UserRound, path: "/" },
+  { name: "Education", icon: GraduationCap, path: "/education" },
+  { name: "Experience", icon: BriefcaseBusiness, path: "/experience" },
+  { name: "Projects", icon: FolderCode, path: "/projects" },
+  { name: "Research", icon: Microscope, path: "/research" },
+  { name: "Blogs", icon: BookOpen, path: "/blogs" },
+  { name: "Pics", icon: Camera, path: "/pics" },
 ];
 
 export default function Navbar() {
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div id="site-navigation" className={`${styles.navigation} ${isOpen ? styles.open : ""}`}>
         <nav className={styles.navItems} aria-label="Main navigation">
           {navItems.map((item) => (
-            <Link key={item.path} href={item.path} onClick={() => setIsOpen(false)} aria-current={pathname === item.path ? "page" : undefined} className={`${styles.navItem} ${pathname === item.path ? styles.active : ""}`}>{item.name}</Link>
+            <Link key={item.path} href={item.path} onClick={() => setIsOpen(false)} aria-current={pathname === item.path ? "page" : undefined} className={`${styles.navItem} ${pathname === item.path ? styles.active : ""}`}><item.icon size={18} aria-hidden="true" /><span>{item.name}</span></Link>
           ))}
         </nav>
         <div className={styles.sidebarFooter}>

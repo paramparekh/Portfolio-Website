@@ -1,14 +1,13 @@
+import PageHeader from "@/components/PageHeader";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 export default function Education() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-            <header style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '1rem' }}>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Education</h1>
-            </header>
+        <div className="page-stack">
+            <PageHeader title="Education" description="Academic background in computer science and information technology." />
 
             {/* Education Item 1 */}
-            <div style={{ paddingLeft: '1.5rem', borderLeft: '2px solid var(--card-border)' }}>
+            <div className="education-entry">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.5rem' }}>
                     <div>
                         <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>Stony Brook University</h2>
@@ -33,7 +32,7 @@ export default function Education() {
             </div>
 
             {/* Education Item 2 */}
-            <div style={{ paddingLeft: '1.5rem', borderLeft: '2px solid var(--card-border)' }}>
+            <div className="education-entry">
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '0.5rem' }}>
                     <div>
                         <h2 style={{ fontSize: '1.5rem', fontWeight: '700' }}>Dhirubhai Ambani University</h2>

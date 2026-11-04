@@ -1,11 +1,10 @@
+import PageHeader from "@/components/PageHeader";
 import { Trophy, Award, Star, BookOpen, Crown } from "lucide-react";
 
 export default function Achievements() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-            <header style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '1rem' }}>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Achievements</h1>
-            </header>
+        <div className="page-stack">
+            <PageHeader title="Achievements" description="Selected awards and recognition." />
 
             <div className="responsive-card-grid">
 

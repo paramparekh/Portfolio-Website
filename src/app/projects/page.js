@@ -1,4 +1,5 @@
-import { Code, Layers, Database, Lock, Radio, Globe } from "lucide-react";
+import PageHeader from "@/components/PageHeader";
+import { Code, Layers, Database, Lock, Radio, ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
     const projects = [
@@ -92,85 +93,33 @@ export default function Projects() {
     ];
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-            <header style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '1rem' }}>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Projects</h1>
-            </header>
-
-            <div className="responsive-card-grid">
-                {projects.map((project, index) => {
+        <div className="page-stack">
+            <PageHeader title="Projects" description="Selected work across quantum computing, cryptography, AI, and software engineering." />
+            <div className="project-list">
+                {projects.map((project) => {
                     const Icon = project.icon;
+                    const links = project.links || [{ label: "View project", url: project.link }];
                     return (
-                        <div key={index} className="glass-panel" style={{
-                            padding: '0', overflow: 'hidden', display: 'flex', flexDirection: 'column',
-                            transition: 'transform 0.2s ease', background: 'var(--card-bg)'
-                        }}>
-                            <div style={{
-                                height: '100px', background: 'var(--accent-glow)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid var(--card-border)',
-                                position: 'relative'
-                            }}>
-                                <Icon size={32} style={{ opacity: 0.8, color: 'var(--accent)' }} />
-                                {project.link && (
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{
-                                        position: 'absolute', top: '10px', right: '10px',
-                                        background: 'rgba(255,255,255,0.2)', padding: '6px', borderRadius: '50%',
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        transition: 'background 0.2s', backdropFilter: 'blur(4px)'
-                                    }} title="View Project">
-                                        <Globe size={18} color="var(--accent)" />
-                                    </a>
-                                )}
-                                {project.links && (
-                                    <div style={{ position: 'absolute', top: '10px', right: '10px', display: 'flex', gap: '6px' }}>
-                                        {project.links.map((l) => (
-                                            <a key={l.label} href={l.url} target="_blank" rel="noopener noreferrer" style={{
-                                                background: 'rgba(255,255,255,0.2)', padding: '4px 10px', borderRadius: '12px',
-                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                                backdropFilter: 'blur(4px)', fontSize: '0.78rem', fontWeight: '600',
-                                                color: 'var(--accent)', textDecoration: 'none', border: '1px solid rgba(255,255,255,0.3)'
-                                            }} title={l.label}>
-                                                {l.label}
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
+                        <article key={project.title} className="project-card">
+                            <div className="project-heading">
+                                <div className="project-icon"><Icon size={22} aria-hidden="true" /></div>
+                                <div>
+                                    <p className="project-date">{project.date}{project.teamSize && ` | Team of ${project.teamSize}`}</p>
+                                    <h2>{project.title}</h2>
+                                </div>
                             </div>
-
-                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '0.6rem' }}>
-                                    <h2 style={{ fontSize: '1.25rem', fontWeight: '700', color: 'var(--primary)', lineHeight: '1.3' }}>
-                                        {project.title}
-                                    </h2>
-                                </div>
-                                <div style={{ fontSize: '0.85rem', color: 'var(--secondary)', marginBottom: '0.8rem', fontWeight: '500' }}>
-                                    {project.teamSize ? `Team size: ${project.teamSize} · ${project.date}` : project.date}
-                                </div>
-
+                            <div className="project-description">
                                 {Array.isArray(project.description) ? (
-                                    <ul style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1, margin: '0 0 1.2rem', paddingLeft: '1.2rem' }}>
-                                        {project.description.map((item) => (
-                                            <li key={item} style={{ marginBottom: '0.6rem' }}>{item}</li>
-                                        ))}
-                                    </ul>
-                                ) : (
-                                    <p style={{ color: 'var(--foreground)', fontSize: '0.95rem', lineHeight: '1.6', flex: 1, marginBottom: '1.2rem' }}>
-                                        {project.description}
-                                    </p>
-                                )}
-
-                                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginTop: 'auto' }}>
-                                    {project.tags.map(tag => (
-                                        <span key={tag} style={{
-                                            fontSize: '0.8rem', padding: '0.25rem 0.6rem', borderRadius: '4px',
-                                            background: 'var(--background)', color: 'var(--secondary)', fontWeight: '500', border: '1px solid var(--card-border)'
-                                        }}>
-                                            {tag}
-                                        </span>
-                                    ))}
-                                </div>
+                                    <ul>{project.description.map(item => <li key={item}>{item}</li>)}</ul>
+                                ) : <p>{project.description}</p>}
                             </div>
-                        </div>
+                            <div className="project-footer">
+                                <div className="tag-list">{project.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}</div>
+                                <div className="project-links">{links.map(link => (
+                                    <a href={link.url} key={link.label} target="_blank" rel="noopener noreferrer" aria-label={`${link.label}: ${project.title}`}>{link.label} <ArrowUpRight size={16} aria-hidden="true" /></a>
+                                ))}</div>
+                            </div>
+                        </article>
                     );
                 })}
             </div>

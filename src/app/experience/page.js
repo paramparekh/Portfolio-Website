@@ -1,15 +1,14 @@
+import PageHeader from "@/components/PageHeader";
 import { Trophy, Users, BookOpen, Code, Terminal, Layers, Microscope, Award, Star } from "lucide-react";
 import Image from "next/image";
 
 export default function Experience() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-            <header style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '1rem' }}>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Experience</h1>
-            </header>
+        <div className="page-stack">
+            <PageHeader title="Experience" description="Research, engineering, and the tools behind my work." />
 
             {/* 0. Graduate Research Assistant - May 2026 to present */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 {/* Left Col: Icon & Date */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '70px', height: '70px', position: 'relative', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -34,10 +33,10 @@ export default function Experience() {
                         <li>Conducting graduate thesis research in quantum cryptography under the supervision of Prof. Supartha Podder, investigating applications of quantum computing theory to emerging cryptographic primitives.</li>
                     </ul>
                 </div>
-            </div>
+            </article>
 
             {/* 1. Job 1 - Aug 2023 to July 2025 (GE Vernova SW I) */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 {/* Left Col: Logo & Date */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '70px', height: '70px', position: 'relative', flexShrink: 0 }}>
@@ -65,10 +64,10 @@ export default function Experience() {
                         <li>Worked on the iFIX (HMI/SCADA solution under Proficy suite of products) modernization feature.</li>
                     </ul>
                 </div>
-            </div>
+            </article>
 
             {/* 2. Job 2 - Jan 2023 to Jul 2023 (GE Vernova Intern) */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 {/* Left Col: Logo & Date */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '70px', height: '70px', position: 'relative', flexShrink: 0 }}>
@@ -97,14 +96,12 @@ export default function Experience() {
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <div style={{ height: '1px', background: 'var(--card-border)', margin: '1rem 0' }} />
+            </article>
 
             {/* Technical Skills Section */}
-            <h3 style={{ fontSize: '1.8rem', fontWeight: '600', color: 'var(--secondary)', marginBottom: '1rem' }}>Technical Skills</h3>
+            <h2 className="section-heading">Technical Skills</h2>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-card-grid">
                 {/* Languages */}
                 <div className="glass-panel" style={{ padding: '1.5rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1rem' }}>
@@ -161,12 +158,10 @@ export default function Experience() {
             </div>
 
 
-            <div style={{ height: '1px', background: 'var(--card-border)', margin: '1rem 0' }} />
-
-            <h3 style={{ fontSize: '1.8rem', fontWeight: '600', color: 'var(--secondary)', marginBottom: '1rem' }}>Conferences & Hackathons</h3>
+            <h2 className="section-heading">Conferences & Hackathons</h2>
 
             {/* 3. MIT Hackathon - Jan 2026 */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 {/* Left Col: Icon & Date */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '50px', height: '50px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#f59e0b', border: '1px solid #f59e0b', flexShrink: 0 }}>
@@ -184,10 +179,10 @@ export default function Experience() {
                     </h2>
                     <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Confirmed Participant &bull; iQuHack 2026</h3>
                 </div>
-            </div>
+            </article>
 
             {/* 4. Conference - Mar 2025 */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '50px', height: '50px', background: 'var(--accent-glow)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)', border: '1px solid var(--accent)', flexShrink: 0 }}>
                         <Users size={24} />
@@ -205,10 +200,10 @@ export default function Experience() {
                     </h2>
                     <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
                 </div>
-            </div>
+            </article>
 
             {/* 5. Seminar - Mar 2024 */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '50px', height: '50px', background: 'rgba(15, 13, 42, 0.05)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--secondary)', border: '1px solid var(--card-border)', flexShrink: 0 }}>
                         <BookOpen size={24} />
@@ -222,10 +217,10 @@ export default function Experience() {
                     <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>The second International Coding theory Seminar</h2>
                     <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Seminar</h3>
                 </div>
-            </div>
+            </article>
 
             {/* 6. Conference - Dec 2023 */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '1.5rem' }}>
+            <article className="timeline-entry">
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '50px', height: '50px', background: 'var(--accent-glow)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent)', border: '1px solid var(--accent)', flexShrink: 0 }}>
                         <Users size={24} />
@@ -243,11 +238,9 @@ export default function Experience() {
                     </h2>
                     <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
                 </div>
-            </div>
+            </article>
 
-            <div style={{ height: '1px', background: 'var(--card-border)', margin: '1rem 0' }} />
-
-            <h3 style={{ fontSize: '1.8rem', fontWeight: '600', color: 'var(--secondary)', marginBottom: '1rem' }}>Achievements</h3>
+            <h2 className="section-heading">Achievements</h2>
 
             <div className="responsive-card-grid">
 

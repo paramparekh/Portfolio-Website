@@ -1,11 +1,10 @@
+import PageHeader from "@/components/PageHeader";
 import { Microscope, Globe, Database, Code, FileText } from "lucide-react";
 
 export default function Research() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-            <header style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '1rem' }}>
-                <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Research</h1>
-            </header>
+        <div className="page-stack">
+            <PageHeader title="Research" description="Research interests, publications, and computational contributions." />
 
             <section>
                 <h2 style={{ fontSize: '1.4rem', marginBottom: '1.2rem', display: 'flex', alignItems: 'center', gap: '0.6rem', fontWeight: '600' }}>
@@ -28,7 +27,7 @@ export default function Research() {
                 <h2 style={{ fontSize: '1.6rem', fontWeight: '700' }}>Publications</h2>
 
                 {/* Publication 1 */}
-                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
+                <div className="glass-panel publication-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
                     <div style={{
                         minWidth: '50px', height: '60px', background: 'var(--background)', borderRadius: '4px', border: '1px solid var(--card-border)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
@@ -58,7 +57,7 @@ export default function Research() {
                 </div>
 
                 {/* OEIS Publications */}
-                <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
+                <div className="glass-panel publication-card" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
                     <div style={{
                         minWidth: '50px', height: '60px', background: 'var(--background)', borderRadius: '4px', border: '1px solid var(--card-border)',
                         display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0
