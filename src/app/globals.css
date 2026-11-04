@@ -133,8 +133,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .desktop-break { display: none; }
 }
 @media (max-width: 800px) {
-  .site-layout { grid-template-columns: minmax(0, 1fr); }
-  .container { grid-column: 1; grid-row: 2; padding: 1.75rem 1.25rem 3rem; }
+  :root { --sidebar-width: 112px; }
+  .container { padding: 1.5rem 0.8rem 3rem; }
   .about-hero { gap: 1.75rem; grid-template-columns: minmax(0, 1fr) 180px; padding: 1.5rem; }
   .profile-portrait img { height: 225px; }
   .desktop-break { display: none; }
@@ -163,7 +163,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .empty-state p { max-width: 410px; color: var(--secondary); }
 .skip-link { position: fixed; top: 0.75rem; left: 0.75rem; transform: translateY(-200%); padding: 0.6rem 1rem; color: #fff; background: #2459c4; border-radius: 4px; z-index: 200; }
 .skip-link:focus { transform: translateY(0); }
-@media (min-width: 801px) and (max-width: 1050px) {
+@media (max-width: 1050px) {
   .about-hero { grid-template-columns: 1fr; }
   .profile-portrait { width: 200px; }
   .profile-portrait img { height: 240px; }
@@ -175,7 +175,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .skill-logo img { display: block; object-fit: contain; }
 .employer-logo { display: flex; align-items: center; justify-content: center; width: 80px; height: 80px; flex-shrink: 0; background: #ffffff; border: 1px solid var(--card-border); border-radius: 8px; padding: 4px; }
 .employer-logo img { display: block; object-fit: contain; max-width: 100%; }
-@media (max-height: 620px) {
-  .site-layout { grid-template-columns: minmax(0, 1fr); }
-  .container { grid-column: 1; grid-row: 2; }
+@media (max-width: 600px) {
+  .about-hero { padding: 1rem; }
+  .profile-portrait { max-width: 100%; }
+  .biography h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
 }
