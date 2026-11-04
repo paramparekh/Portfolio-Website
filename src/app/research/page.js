@@ -1,3 +1,4 @@
+import CurrentResearch from "@/components/CurrentResearch";
 import PageHeader from "@/components/PageHeader";
 import { Microscope, Globe, Database, Code, FileText } from "lucide-react";
 
@@ -22,6 +23,7 @@ export default function Research() {
                     ))}
                 </div>
             </section>
+      <CurrentResearch />
 
             <section style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
                 <h2 style={{ fontSize: '1.6rem', fontWeight: '700' }}>Publications</h2>

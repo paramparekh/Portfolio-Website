@@ -1,3 +1,4 @@
+import CurrentResearch from "@/components/CurrentResearch";
 import { ArrowUpRight, Mail, FileText } from "lucide-react";
 import Image from "next/image";
 
@@ -37,6 +38,7 @@ export default function Home() {
           <li><span>Artificial intelligence</span></li>
         </ul>
       </section>
+      <CurrentResearch />
       <div className="social-links" aria-label="Academic and social profiles">
         {[
           { name: "LinkedIn", url: "https://www.linkedin.com/in/param-parekh-2a990a1b7/" },

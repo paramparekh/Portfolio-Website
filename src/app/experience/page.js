@@ -23,7 +23,7 @@ export default function Experience() {
                 {/* Right Col: Content */}
                 <div>
                     <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>Graduate Research Assistant</h2>
-                    <h3 style={{ fontSize: '1.2rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>Stony Brook University, New York, USA</h3>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>Stony Brook University, New York, USA</h3>
 
                     <ul style={{
                         display: 'flex', flexDirection: 'column', gap: '0.6rem',
@@ -49,7 +49,7 @@ export default function Experience() {
                 {/* Right Col: Content */}
                 <div>
                     <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>Software Engineer</h2>
-                    <h3 style={{ fontSize: '1.2rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>GE Vernova</h3>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>GE Vernova</h3>
 
                     <ul style={{
                         display: 'flex', flexDirection: 'column', gap: '0.6rem',
@@ -80,7 +80,7 @@ export default function Experience() {
                 {/* Right Col: Content */}
                 <div>
                     <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>Digital Technology Intern</h2>
-                    <h3 style={{ fontSize: '1.2rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>GE Vernova</h3>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>GE Vernova</h3>
 
                     <ul style={{
                         display: 'flex', flexDirection: 'column', gap: '0.6rem',
@@ -161,7 +161,7 @@ export default function Experience() {
                     <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>
                         <a href="https://drive.google.com/file/d/1OkawFIcH_82slAnBwuUNCGROPOpVF0y1/view?usp=sharing" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline' }}>MIT Quantum Hackathon</a>
                     </h2>
-                    <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Confirmed Participant &bull; iQuHack 2026</h3>
+                    <h3 style={{ fontSize: '1.1rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)' }}>Confirmed Participant &bull; iQuHack 2026</h3>
                 </div>
             </article>
 
@@ -182,7 +182,7 @@ export default function Experience() {
                             Theory and Practice of Multiparty Computation
                         </a>
                     </h2>
-                    <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
+                    <h3 style={{ fontSize: '1.1rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
                 </div>
             </article>
 
@@ -199,7 +199,7 @@ export default function Experience() {
 
                 <div>
                     <h2 style={{ fontSize: '1.4rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>The second International Coding theory Seminar</h2>
-                    <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Seminar</h3>
+                    <h3 style={{ fontSize: '1.1rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)' }}>Attended Seminar</h3>
                 </div>
             </article>
 
@@ -220,7 +220,7 @@ export default function Experience() {
                             International Conference on Algebraic Geometry, Coding Theory and Combinatorics
                         </a>
                     </h2>
-                    <h3 style={{ fontSize: '1.1rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
+                    <h3 style={{ fontSize: '1.1rem', color: 'var(--foreground)', fontFamily: 'var(--font-sans)' }}>Attended Conference</h3>
                 </div>
             </article>
 
