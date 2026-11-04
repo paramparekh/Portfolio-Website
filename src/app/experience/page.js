@@ -13,7 +13,7 @@ export default function Experience() {
                 {/* Left Col: Icon & Date */}
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
                     <div style={{ width: '70px', height: '70px', position: 'relative', flexShrink: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <div style={{ width: '70px', height: '70px', background: 'rgba(14, 116, 144, 0.1)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--card-border)' }}>
+                        <div style={{ width: '70px', height: '70px', background: 'var(--accent-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '1px solid var(--card-border)' }}>
                             <Microscope size={32} color="var(--primary)" />
                         </div>
                     </div>
@@ -25,7 +25,7 @@ export default function Experience() {
                 {/* Right Col: Content */}
                 <div>
                     <h2 style={{ fontSize: '1.5rem', fontWeight: '700', color: 'var(--primary)', marginBottom: '0.2rem' }}>Graduate Research Assistant</h2>
-                    <h3 style={{ fontSize: '1.2rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>Stony Brook University &nbsp;&mdash;&nbsp; New York, USA</h3>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--accent)', fontFamily: 'var(--font-sans)', marginBottom: '0.8rem' }}>Stony Brook University, New York, USA</h3>
 
                     <ul style={{
                         display: 'flex', flexDirection: 'column', gap: '0.6rem',
@@ -112,9 +112,9 @@ export default function Experience() {
                         <h4 style={{ fontSize: '1.1rem', fontWeight: '600' }}>Programming Languages</h4>
                     </div>
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
-                        {['C', 'C++', 'Python', 'Qiskit', 'SQL', 'Matlab', 'HTML', 'CSS', 'Javascript', 'GO'].map(skill => (
+                        {['C', 'C++', 'Python', 'Qiskit', 'ZX calculus', 'SQL', 'Matlab', 'HTML', 'CSS', 'Javascript', 'GO'].map(skill => (
                             <span key={skill} style={{
-                                background: 'rgba(14, 116, 144, 0.1)', color: 'var(--primary)',
+                                background: 'var(--accent-glow)', color: 'var(--primary)',
                                 padding: '0.3rem 0.6rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: '500'
                             }}>
                                 {skill}
@@ -132,7 +132,7 @@ export default function Experience() {
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                         {['Visual Studio', 'VS Code', 'PostgreSQL', 'Matlab & Simulink', 'Arduino IDE', 'Install Shield', 'Angular'].map(skill => (
                             <span key={skill} style={{
-                                background: 'rgba(37, 99, 235, 0.1)', color: 'var(--accent)',
+                                background: 'var(--accent-glow)', color: 'var(--accent)',
                                 padding: '0.3rem 0.6rem', borderRadius: '4px', fontSize: '0.9rem', fontWeight: '500'
                             }}>
                                 {skill}
@@ -249,7 +249,7 @@ export default function Experience() {
 
             <h3 style={{ fontSize: '1.8rem', fontWeight: '600', color: 'var(--secondary)', marginBottom: '1rem' }}>Achievements</h3>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-card-grid">
 
                 {/* GE Vernova Awards - Jul 2024 */}
                 <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
@@ -273,6 +273,7 @@ export default function Experience() {
                 </div>
 
                 {/* First Rank C++ - Jan 2023 */}
+                {/* Hidden at request; retained for future use.
                 <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
                     <div style={{
                         width: '50px', height: '50px', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '50%',
@@ -292,8 +293,10 @@ export default function Experience() {
                         </p>
                     </div>
                 </div>
+                */}
 
                 {/* Second Rank State - Jun 2019 */}
+                {/* Hidden at request; retained for future use.
                 <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
                     <div style={{
                         width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%',
@@ -313,6 +316,7 @@ export default function Experience() {
                         </p>
                     </div>
                 </div>
+                */}
 
             </div>
         </div>

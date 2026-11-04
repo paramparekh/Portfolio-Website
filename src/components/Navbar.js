@@ -1,49 +1,48 @@
-"use client";
+﻿"use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { User, GraduationCap, Briefcase, Code, Microscope, BookOpen, Image as ImageIcon } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 import styles from "./Navbar.module.css";
 
-import ThemeToggle from "./ThemeToggle";
-
 const navItems = [
-  { name: "About Me", path: "/", icon: User },
-  { name: "Education", path: "/education", icon: GraduationCap },
-  { name: "Experience", path: "/experience", icon: Briefcase },
-  { name: "Projects", path: "/projects", icon: Code },
-  { name: "Research", path: "/research", icon: Microscope },
-  { name: "Blogs", path: "/blogs", icon: BookOpen },
-  { name: "Pics", path: "/pics", icon: ImageIcon },
+  { name: "About Me", path: "/" },
+  { name: "Education", path: "/education" },
+  { name: "Experience", path: "/experience" },
+  { name: "Projects", path: "/projects" },
+  { name: "Research", path: "/research" },
+  { name: "Blogs", path: "/blogs" },
+  { name: "Pics", path: "/pics" },
 ];
 
 export default function Navbar() {
   const pathname = usePathname();
-
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className={styles.navContainer}>
-      <div className={styles.navGlass}>
-        <div className={styles.scrollContainer}>
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = pathname === item.path;
-
-            return (
-              <Link
-                key={item.path}
-                href={item.path}
-                className={`${styles.navItem} ${isActive ? styles.active : ""}`}
-              >
-                <Icon size={18} />
-                <span>{item.name}</span>
-                {isActive && <div className={styles.activeIndicator} />}
-              </Link>
-            );
-          })}
-        </div>
-        <div style={{ marginLeft: '0.5rem', borderLeft: '1px solid var(--secondary)', opacity: 0.3, height: '24px' }} />
-        <ThemeToggle />
+    <aside className={styles.sidebar}>
+      <div className={styles.sidebarHeader}>
+        <Link href="/" className={styles.identity} onClick={() => setIsOpen(false)}>
+          <span className={styles.monogram}>PP<span>.</span></span>
+          <span className={styles.name}>Param Parekh</span>
+          <span className={styles.subtitle}>Computer Science Researcher</span>
+        </Link>
+        <button className={styles.menuToggle} onClick={() => setIsOpen(!isOpen)} aria-expanded={isOpen} aria-controls="site-navigation" aria-label={isOpen ? "Close navigation" : "Open navigation"}>
+          {isOpen ? <X size={23} /> : <Menu size={23} />}
+        </button>
       </div>
-    </nav>
+      <div id="site-navigation" className={`${styles.navigation} ${isOpen ? styles.open : ""}`}>
+        <nav className={styles.navItems} aria-label="Main navigation">
+          {navItems.map((item) => (
+            <Link key={item.path} href={item.path} onClick={() => setIsOpen(false)} aria-current={pathname === item.path ? "page" : undefined} className={`${styles.navItem} ${pathname === item.path ? styles.active : ""}`}>{item.name}</Link>
+          ))}
+        </nav>
+        <div className={styles.sidebarFooter}>
+          <p>Stony Brook University<br />New York, USA</p>
+          <div className={styles.themeControl}><span>Appearance</span><ThemeToggle /></div>
+        </div>
+      </div>
+    </aside>
   );
 }

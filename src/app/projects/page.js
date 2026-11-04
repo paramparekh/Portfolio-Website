@@ -1,7 +1,19 @@
-import { Github, ExternalLink, Code, Layers, Database, Lock, Radio, Globe } from "lucide-react";
+import { Code, Layers, Database, Lock, Radio, Globe } from "lucide-react";
 
 export default function Projects() {
     const projects = [
+        {
+            title: "qLDPC CoDesign Explorer",
+            description: [
+                "Developed an interactive research platform for exploring quantum low-density parity-check error-correction workflows.",
+                "Designed an end-to-end experience spanning experiment configuration, error injection, syndrome observation, and decoding.",
+                "Applied HCI principles to make complex QEC concepts understandable and inspectable."
+            ],
+            tags: ["Quantum Error Correction", "qLDPC", "HCI"],
+            icon: Layers,
+            date: "Sept 2026",
+            link: "https://github.com/paramparekh/qldpc-codesign-explorer"
+        },
         {
             title: "Pseudorandom Unitaries",
             description: [
@@ -54,14 +66,6 @@ export default function Projects() {
             link: "https://github.com/paramparekh/Foundational-QuantumAlgorithms-Qiskit.git"
         },
         {
-            title: "Detection and Tracking of Accidents using Sequential Estimation Techniques",
-            description: "Developed a system for real-time accident detection and tracking using ARMA/ARIMA modeling and statistical tests (SPRT, CUSUM, Page-Hinkley) to monitor traffic speed patterns effectively.",
-            tags: ["ARMA/ARIMA", "Statistical Tests", "Python", "Real-time Monitoring"],
-            icon: Layers,
-            date: "Sept 2025",
-            link: "https://github.com/paramparekh/AccidentDetectionSystem"
-        },
-        {
             title: "Maximal Ratio Combining (MRC) in SIMO Wireless Communication System",
             description: "Performed literature review and simulation of MRC techniques using Matlab & Simulink to maximize SNR and mitigate channel fading effects in SIMO systems.",
             tags: ["Matlab", "Simulink", "Wireless Comm", "SIMO", "MRC"],
@@ -93,7 +97,7 @@ export default function Projects() {
                 <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Projects</h1>
             </header>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-card-grid">
                 {projects.map((project, index) => {
                     const Icon = project.icon;
                     return (

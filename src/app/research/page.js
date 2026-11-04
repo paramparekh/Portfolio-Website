@@ -12,7 +12,7 @@ export default function Research() {
                     <Microscope size={22} color="var(--accent)" /> Research Interests
                 </h2>
                 <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
-                    {['Quantum Computing', 'Cryptography'].map(tag => (
+                    {['Quantum Computing', 'Cryptography', 'Artificial Intelligence'].map(tag => (
                         <span key={tag} style={{
                             fontSize: '0.95rem', padding: '0.5rem 1rem', borderRadius: '2rem',
                             background: 'var(--card-bg)', border: '1px solid var(--card-border)', color: 'var(--foreground)',

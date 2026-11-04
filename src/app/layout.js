@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/contexts/ThemeContext";
 
 export const metadata = {
   title: "Param Parekh",
-  description: "Researcher in Quantum Computing and Cryptography",
+  description: "Param Parekh — Master's student at Stony Brook University researching quantum cryptography, AI generated content detection, and quantum error correction.",
 };
 
 export default function RootLayout({ children }) {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <ThemeProvider>
           <Navbar />
-          <main className="container" style={{ paddingTop: '7.5rem', paddingBottom: '4rem' }}>
+          <main className="container" id="main-content">
             {children}
           </main>
         </ThemeProvider>

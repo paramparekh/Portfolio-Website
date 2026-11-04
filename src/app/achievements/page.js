@@ -7,7 +7,7 @@ export default function Achievements() {
                 <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>Achievements</h1>
             </header>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
+            <div className="responsive-card-grid">
 
 
 
@@ -33,6 +33,7 @@ export default function Achievements() {
                 </div>
 
                 {/* 3. First Rank C++ - Jan 2023 */}
+                {/* Hidden at request; retained for future use.
                 <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
                     <div style={{
                         width: '50px', height: '50px', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '50%',
@@ -52,8 +53,10 @@ export default function Achievements() {
                         </p>
                     </div>
                 </div>
+                */}
 
                 {/* 4. Second Rank State - Jun 2019 */}
+                {/* Hidden at request; retained for future use.
                 <div className="glass-panel" style={{ padding: '1.5rem', display: 'flex', gap: '1.2rem', alignItems: 'center' }}>
                     <div style={{
                         width: '50px', height: '50px', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%',
@@ -73,6 +76,7 @@ export default function Achievements() {
                         </p>
                     </div>
                 </div>
+                */}
 
             </div>
         </div>
